@@ -1,0 +1,23 @@
+.bg-100 {
+  background-color: var(--bg-100);
+}
+
+.bg-900 {
+  background-color: var(--bg-900);
+}
+
+.text-primary-100 {
+  color: var(--primary-100);
+}
+
+.text-primary-500 {
+  color: var(--primary-500);
+}
+
+.fade-up {
+  animation: fade-up 0.4s ease-out both;
+}
+
+.fade-up-delay {
+  animation: fade-up 0.4s ease-out 0.2s both;
+}

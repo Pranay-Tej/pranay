@@ -1,0 +1,214 @@
+@import url(reset.css);
+@import url(variables.css);
+@import url(library.css);
+@import url(utils.css);
+@import url(animations.css);
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", Roboto, "Helvetica Neue", sans-serif;
+  /* background: var(--bg-100); */
+  color: var(--text);
+  border-top: 3px solid var(--primary-500);
+}
+
+/* generic */
+.section {
+  margin: 0 auto;
+  padding: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    max-width: 80vw;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+  /* font-weight: normal; */
+  margin-bottom: 1em;
+}
+
+/* ============================================================================ */
+/* hero */
+
+.hero {
+  margin-top: 5em;
+  display: grid;
+  gap: 2em;
+  padding: 1em;
+}
+
+@media screen and (min-width: 870px) {
+  .hero {
+    grid-template-columns: 1fr 400px;
+  }
+}
+
+.intro {
+  /* padding-top: 2em; */
+  align-self: center;
+}
+
+.hello {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.cursor {
+  animation: blink 2s ease-out infinite both;
+  color: var(--primary-500);
+}
+
+.name {
+  margin-bottom: 0.5rem;
+  font-size: 2.3rem;
+}
+
+.role {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.links {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 2em;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+/* .links a {
+  height: 2em;
+  width: 2em;
+} */
+
+.keySkills {
+  /* color: var(--gray-900); */
+  border-radius: 3px;
+  padding: 1em 2em;
+}
+
+.keySkills h3 {
+  margin-bottom: 1em;
+}
+
+.keySkills li {
+  margin-bottom: 0.6rem;
+}
+
+/* ============================================================================ */
+/* projects */
+
+.projects {
+  margin: 1em auto;
+  display: grid;
+  gap: 2.5em;
+}
+
+@media screen and (min-width: 1125px) {
+  .projects {
+    /* grid-template-columns: repeat(auto-fll, minmax(250px, 1fr));
+    grid-auto-flow: column; */
+    max-width: 50vw;
+  }
+}
+
+.project {
+  display: grid;
+  border: 1px solid var(--gray-400);
+  border-radius: 3px;
+}
+
+.projectImage {
+}
+
+.projectInfo {
+  padding: 1em;
+  display: grid;
+  align-content: center;
+}
+
+.projectTitle {
+  display: inline-block;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--primary-500);
+  justify-self: start;
+}
+
+.projectDescription {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+}
+
+@media screen and (min-width: 600px) {
+  .project {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info image";
+  }
+  .project:nth-child(odd) {
+    grid-template-areas: "image info";
+  }
+
+  .projectImage {
+    grid-area: image;
+  }
+
+  .projectInfo {
+    grid-area: info;
+  }
+}
+
+/* ============================================================================ */
+/* awards */
+
+.award {
+  display: grid;
+  justify-items: center;
+  gap: 1em;
+}
+
+.silverMedalContainer {
+  border: 1px solid var(--gray-100);
+  border-radius: 50%;
+  height: 7em;
+  padding: 1em;
+  width: 7em;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+
+.silverMedal {
+  height: 5em;
+  width: 5em;
+}
+
+/* ============================================================================ */
+/* skills */
+
+.skillGrid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  grid-auto-rows: 125px;
+}
+
+.skill {
+  display: grid;
+  grid-template-rows: 1fr 1em;
+  align-items: center;
+}
+
+.skillName {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
