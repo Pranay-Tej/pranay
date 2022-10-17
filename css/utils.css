@@ -35,6 +35,10 @@
   max-width: 35em;
 }
 
+.mb {
+  margin-bottom: 1em;
+}
+
 .text-light {
   color: var(--gray-400);
 }
